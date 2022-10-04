@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<sc50.h>
+
+int main(void)
+{
+    do
+    {
+        int height = get_int(" Enter Height");
+    } while ( height < 1 || height > 8);
+    
+    for (int row = 1; row <= height; row++)
+    {       
+        for (int space = 0; space < height - row  ; space++)
+        {
+            printf(" ");
+        }
+        for (int col = 1; col <= row; col++)
+        {
+            printf("#");
+        }
+        printf("  ");
+        for (int col = 1; col <= row; col++)
+        {
+            printf("#");
+        }
+        printf("\n");   
+    }   
+}
